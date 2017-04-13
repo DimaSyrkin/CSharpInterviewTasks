@@ -17,9 +17,33 @@ namespace BinaryTreeDepth
 			tree.Insert(50);
 			tree.Insert(100);
 			tree.Insert(18);
+			tree.Insert(8);
+			tree.Insert(6);
+			tree.Insert(66);
 
-			int depth = tree.GetDepth();
+			int depth = tree.GetDepthRecursive();
 			Console.WriteLine(depth);
+			tree.TraverseRecursive(BinaryTree.TraversalType.PreOrder);
+			Console.WriteLine();
+			tree.TraverseRecursive(BinaryTree.TraversalType.InOrder);
+			Console.WriteLine();
+			tree.TraverseRecursive(BinaryTree.TraversalType.PostOrder);
+			Console.WriteLine();
+			/*
+			tree.TraverseMorrisPreOrder();
+			Console.WriteLine();
+			tree.TraverseMorrisInOrder();
+			Console.WriteLine();
+
+			tree.TraversePreOrderStack();
+			Console.WriteLine();
+
+			tree.TraverseBreadth();
+			Console.WriteLine();
+			 */
+			int maxDepth = tree.GetMaxDepth();
+			Console.WriteLine(maxDepth);
+			//tree.TraverseDictionary();
 		}
 	}
 }

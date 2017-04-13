@@ -13,7 +13,7 @@ namespace BinaryTreeDepth
 			BinaryTree tree = new BinaryTree(25);
 
 			// act
-			int actualDepth = tree.GetDepth();
+			int actualDepth = tree.GetMaxDepth();
 
 			// assert
 			Assert.AreEqual(expectedDeplth, actualDepth);
@@ -27,7 +27,7 @@ namespace BinaryTreeDepth
 			BinaryTree tree = new BinaryTree();
 
 			// act
-			int actualDepth = tree.GetDepth();
+			int actualDepth = tree.GetMaxDepth();
 
 			// assert
 			Assert.AreEqual(expectedDeplth, actualDepth);
@@ -44,7 +44,7 @@ namespace BinaryTreeDepth
 			tree.Insert(30);
 
 			// act
-			int actualDepth = tree.GetDepth();
+			int actualDepth = tree.GetMaxDepth();
 
 			// assert
 			Assert.AreEqual(expectedDeplth, actualDepth);
@@ -65,7 +65,7 @@ namespace BinaryTreeDepth
 			tree.Insert(50);
 
 			// act
-			int actualDepth = tree.GetDepth();
+			int actualDepth = tree.GetMaxDepth();
 
 			// assert
 			Assert.AreEqual(expectedDeplth, actualDepth);
@@ -87,7 +87,7 @@ namespace BinaryTreeDepth
 			tree.Insert(40);
 
 			// act
-			int actualDepth = tree.GetDepth();
+			int actualDepth = tree.GetMaxDepth();
 
 			// assert
 			Assert.AreEqual(expectedDeplth, actualDepth);

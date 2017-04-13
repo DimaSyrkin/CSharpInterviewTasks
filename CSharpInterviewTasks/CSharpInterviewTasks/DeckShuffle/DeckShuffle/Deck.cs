@@ -16,14 +16,7 @@ namespace DeckShuffle
 
 		public void Shuffle()
 		{
-			Random random = new Random();
-			/*
-			for (int i = _size - 1; i >= 0; i--)
-			{
-				int randomIndex = random.Next(i + 1);
-				Swap(randomIndex, i);
-			}
-			*/
+			MyRandom random = new MyRandom();
 
 			for (int i = 0; i < Size - 1; i++)
 			{
@@ -45,6 +38,32 @@ namespace DeckShuffle
 			int temp = Cards[firstIndex];
 			Cards[firstIndex] = Cards[secondIndex];
 			Cards[secondIndex] = temp;
+		}
+	}
+
+	public class MyRandom
+	{
+		public int Seed;
+
+		public MyRandom()
+		{
+			Seed = Environment.TickCount;
+		}
+
+		public int Next(int minValue, int maxValue)
+		{
+			if (maxValue < minValue)
+			{
+				throw new ArgumentOutOfRangeException("Random range is not valid.");
+			}
+
+			Seed += Environment.TickCount*123456789;
+
+			if (Seed < 0)
+			{
+				Seed *= -1;
+			}
+			return Seed%(maxValue - minValue) + minValue;
 		}
 	}
 }

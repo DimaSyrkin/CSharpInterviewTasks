@@ -21,6 +21,7 @@ namespace DeckShuffle
 			}
 
 			deck.Shuffle();
+			//deck.Shuffle();
 
 			for (int i = 0; i < deck.Size; i++)
 			{
